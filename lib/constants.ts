@@ -1,9 +1,9 @@
 export const CONTACT_INFO = {
   email: 'contacto@grupoihi.com',
   whatsapp: {
-    number: '523312345678',
-    displayNumber: '+52 33 1234 5678',
-    url: 'https://wa.me/523312345678'
+    number: '523338705860',
+    displayNumber: '+52 33 3870 5860',
+    url: 'https://wa.me/523338705860'
   }
 } as const;
 

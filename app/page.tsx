@@ -9,6 +9,22 @@ export default function MaintenancePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100 flex flex-col items-center justify-center px-4 py-12 relative">
 
+      {/* Logo Grupo IHI */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="mb-6"
+      >
+        <Image
+          src="/GrupoIHI_Icon.svg"
+          alt="Grupo IHI"
+          width={64}
+          height={64}
+          className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-80"
+        />
+      </motion.div>
+
       {/* Título Principal */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
@@ -47,14 +63,29 @@ export default function MaintenancePage() {
       </motion.div>
 
       {/* Footer */}
-      <motion.p
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-sm text-gray-500 font-inter text-center"
+        className="mt-auto pt-8"
       >
-        {COMPANY_INFO.copyright}
-      </motion.p>
+        <p className="text-sm text-gray-500 font-inter text-center mb-4">
+          {COMPANY_INFO.copyright}
+        </p>
+
+        {/* Designed by Abbrix */}
+        <div className="flex items-center justify-center gap-2 text-xs text-gray-400 font-inter">
+          <span>designed by:</span>
+          <Image
+            src="/Abbrix_logo.svg"
+            alt="Abbrix"
+            width={40}
+            height={12}
+            className="opacity-70 hover:opacity-100 transition-opacity duration-200 filter grayscale"
+            style={{ filter: 'brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(86%)' }}
+          />
+        </div>
+      </motion.div>
 
       {/* Botón de WhatsApp - Icono discreto en esquina inferior izquierda */}
       <motion.a

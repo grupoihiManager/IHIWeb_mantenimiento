@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
   },
+  icons: {
+    icon: "/GrupoIHI_Icon.svg",
+    shortcut: "/favicon.ico",
+    apple: "/GrupoIHI_Icon.svg",
+  },
 };
 
 export default function RootLayout({
